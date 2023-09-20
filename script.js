@@ -1,7 +1,7 @@
 const container = document.querySelector(".collection-container");
 const collection = [
   {
-    picture: "./assets/grandmotherillustration.png",
+    picture: "./assets/grandmother.jpg",
     model: "Grandmother",
     brand: "MOOG",
     releaseYear: 2018,
@@ -13,7 +13,7 @@ const collection = [
     brandLink: "https://www.moogmusic.com",
   },
   {
-    picture: "./assets/lyra-8.jpg",
+    picture: "./assets/lyra8.jpg",
     model: "Lyra-8",
     brand: "SOMA Labs",
     releaseYear: 2016,
@@ -24,7 +24,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/sequentialillustration.jpg",
+    picture: "./assets/prophet6.jpg",
     model: "Prophet-6",
     brand: "Sequential",
     releaseYear: 2015,
@@ -35,7 +35,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/juno60.png",
+    picture: "./assets/juno106.jpg",
     model: "Juno-60",
     brand: "Roland",
     releaseYear: 1984,
@@ -46,7 +46,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/arp2600illustration.jpg",
+    picture: "./assets/arp2600.jpg",
     model: "ARP-2600",
     brand: "ARP",
     releaseYear: 1970,
@@ -57,7 +57,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/microkorg2.jpeg",
+    picture: "./assets/microkorg.jpg",
     model: "Microkorg",
     brand: "Korg",
     releaseYear: 2002,
@@ -79,7 +79,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/minimoogart.jpg",
+    picture: "./assets/minimoog.jpg",
     model: "Minimoog Model D",
     brand: "Moog",
     releaseYear: 1970,
@@ -90,7 +90,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/mellotron.jpeg",
+    picture: "./assets/mellotron.jpg",
     model: "Mellotron M4000",
     brand: "Streetly Electronics",
     releaseYear: 2007,
@@ -101,7 +101,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/microbrute2.jpg",
+    picture: "./assets/microbrute.jpg",
     model: "Microbrute",
     brand: "Arturia",
     releaseYear: 2017,
@@ -112,7 +112,7 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/modular.png",
+    picture: "./assets/modular.jpg",
     model: "Modular Synth",
     brand: "Multiple brands",
     releaseYear: "since 1960",
@@ -123,9 +123,9 @@ const collection = [
     link: "https://www.moogmusic.com/products/grandmother",
   },
   {
-    picture: "./assets/minifreak.jpg",
-    model: "MiniFreak",
-    brand: "Arturia",
+    picture: "./assets/blofeld.jpg",
+    model: "Blofeld",
+    brand: "Waldorf",
     releaseYear: 2022,
     content: [
       "The most recent synth on this list, Arturia made a great deal with this Minifreak : tons of sound, nice playability with aftertouch keys. ",
