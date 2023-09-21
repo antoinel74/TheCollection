@@ -115,7 +115,7 @@ const collection = [
     picture: "./assets/modular.jpg",
     model: "Modular Synth",
     brand: "Multiple brands",
-    releaseYear: "since 1960",
+    releaseYear: "1964",
     content: [
       "Modular synthesizers are composed of separate modules. The modules can be connected together by the user to create a unique sound.",
     ],
@@ -126,7 +126,7 @@ const collection = [
     picture: "./assets/blofeld.jpg",
     model: "Blofeld",
     brand: "Waldorf",
-    releaseYear: 2022,
+    releaseYear: 2007,
     content: [
       "The most recent synth on this list, Arturia made a great deal with this Minifreak : tons of sound, nice playability with aftertouch keys. ",
     ],
@@ -135,7 +135,15 @@ const collection = [
   },
 ];
 
-returnCollection = (collection) => {
+returnCollection = (collection, sortBy) => {
+  if (sortBy === "releaseYear") {
+    collection.sort((a, b) => a.releaseYear - b.releaseYear);
+  } else if (sortBy === "model") {
+    collection.sort((a, b) => a.model.localeCompare(b.model));
+  } else if (sortBy === "brand") {
+    collection.sort((a, b) => a.brand.localeCompare(b.brand));
+  }
+
   return collection
     .map(
       (collectionBox) => `
@@ -159,8 +167,18 @@ returnCollection = (collection) => {
     )
     .join("");
 };
-container.innerHTML = returnCollection(collection);
+
+function populateContainer(sortBy) {
+  container.innerHTML = returnCollection(collection, sortBy);
+}
+
+document.getElementById("sortSelect").addEventListener("change", function () {
+  const sortBy = this.value;
+  populateContainer(sortBy);
+});
 
 function removeBox(e) {
   e.parentNode.parentNode.remove();
 }
+
+populateContainer();

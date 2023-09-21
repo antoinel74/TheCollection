@@ -8,16 +8,21 @@
       src="https://kit.fontawesome.com/b5a5bff8f0.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>The Synth Collection</title>
   </head>
   <body>
     <header>
       <h1 class="big_title">The Synth Collection</h1>
       <nav>
-        <ul>
-          <li>Sorting</li>
-          <li>Search</li>
-        </ul>
+        <div class="sorting">
+          <label for="sortSelect">Sort by :</label>
+          <select id="sortSelect">
+            <option value="default">Default</option>
+            <option value="model">Name</option>
+            <option value="releaseYear">Release Year</option>
+            <option value="brand">Brand</option>
+          </select>
+        </div>
         <a href="#">About</a>
       </nav>
     </header>
