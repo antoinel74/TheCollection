@@ -21,6 +21,7 @@ blockquote,
 pre,
 a,
 .collection-container .item_content h3 a:visited,
+header .big_title a:visited,
 abbr,
 acronym,
 address,
@@ -151,7 +152,7 @@ header .big_title {
   font-weight: 700;
   margin: 24px 0px;
 }
-header .big_title a, header .big_title .collection-container .item_content h3 a:visited, .collection-container .item_content h3 header .big_title a:visited {
+header .big_title a, header .big_title .collection-container .item_content h3 a:visited, .collection-container .item_content h3 header .big_title a:visited, header .big_title a:visited {
   text-decoration: none;
   color: black;
 }
@@ -182,13 +183,13 @@ header nav li {
   margin-left: 20px;
   padding: 20px 0px;
 }
-header nav a, header nav .collection-container .item_content h3 a:visited, .collection-container .item_content h3 header nav a:visited {
+header nav a, header nav .collection-container .item_content h3 a:visited, .collection-container .item_content h3 header nav a:visited, header .big_title .collection-container .item_content h3 nav a:visited, header nav .big_title a:visited, header .big_title nav a:visited {
   background-color: black;
   padding: 20px 48px;
   color: white;
   text-decoration: none;
 }
-header nav a:hover, header nav .collection-container .item_content h3 a:hover:visited, .collection-container .item_content h3 header nav a:hover:visited {
+header nav a:hover, header nav .collection-container .item_content h3 a:hover:visited, .collection-container .item_content h3 header nav a:hover:visited, header nav .big_title a:hover:visited, header .big_title nav a:hover:visited {
   background-color: white;
   color: black;
   border-right: 2px solid black;
