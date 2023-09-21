@@ -4,6 +4,7 @@
 body {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -19,7 +20,6 @@ header {
     justify-content: space-between;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    gap: 20px;
     font-family: Arial, Helvetica, sans-serif;
     .sorting {
       display: flex;
@@ -27,10 +27,13 @@ header {
       margin-left: 20px;
       select {
         border: none;
-        font-size: 0.9em;
+        font-size: 1em;
         margin-left: 12px;
         outline-color: transparent;
         background-color: transparent;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
     li {
@@ -67,6 +70,12 @@ header {
     border-radius: 5px;
     border: solid 2px black;
     padding-bottom: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: transform 160ms linear;
+    &:hover {
+      transform: scale(102%);
+      box-shadow: none;
+    }
   }
   figure {
     position: relative;
@@ -114,15 +123,15 @@ header {
     .learn_btn {
       padding: 8px;
       margin-left: 12px;
-      background-color: white;
+      background-color: black;
       border: 2px solid black;
-      color: black;
+      color: white;
       text-decoration: none;
       font-family: "Syne", sans-serif;
       &:hover {
-        background-color: black;
+        background-color: white;
         border: 2px solid black;
-        color: white;
+        color: black;
       }
     }
     .del_btn {
@@ -132,7 +141,7 @@ header {
       border: none;
       color: rgba(128, 128, 128, 0.535);
       &:hover {
-        color: rgb(133, 6, 6);
+        color: black;
       }
     }
   }

@@ -3,7 +3,7 @@ const collection = [
   {
     picture: "./assets/grandmother.jpg",
     model: "Grandmother",
-    brand: "MOOG",
+    brand: "Moog",
     releaseYear: 2018,
     content: [
       "The ideal starter. Where synthesis is not only about the end result, but the journey of discovery and experimentation.",
@@ -21,7 +21,8 @@ const collection = [
       "LYRA is based on eight generators, which will be referred to as voices. Their design is not like a traditional subtractive synthesis VCO.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://somasynths.com/lyra-organismic-synthesizer/",
+    brandLink: "https://somasynths.com/",
   },
   {
     picture: "./assets/prophet6.jpg",
@@ -32,7 +33,8 @@ const collection = [
       "The Prophet-6 is Dave Smith’s tribute to the poly synth that started it all. But it’s not simply a reissue of a classic...",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://www.sequential.com/product/prophet-6/",
+    brandLink: "https://www.sequential.com/",
   },
   {
     picture: "./assets/juno106.jpg",
@@ -43,7 +45,8 @@ const collection = [
       "The Juno-106 is a six-voice polyphonic, analog synthesizer. It is able to produce pads, piano and great soundscapes...",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://fr.wikipedia.org/wiki/Roland_Juno-106",
+    brandLink: "https://www.roland.com/fr/",
   },
   {
     picture: "./assets/arp2600.jpg",
@@ -54,7 +57,8 @@ const collection = [
       "The 2600 was ARP's answer to the modular system, creating a more compact, more stable and more intuitive synthesizer.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://fr.wikipedia.org/wiki/ARP_2600",
+    brandLink: "http://www.arpsynth.com/en/",
   },
   {
     picture: "./assets/microkorg.jpg",
@@ -65,7 +69,8 @@ const collection = [
       "A wide variety of contrasting synth sounds that were appealing to a broad range of music styles, even those outside of electronic music.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://www.korg.com/fr/products/synthesizers/microkorg/",
+    brandLink: "https://www.korg.com/",
   },
   {
     picture: "./assets/tr808.jpg",
@@ -76,7 +81,8 @@ const collection = [
       "With its warm toned strip of colorful sequencing buttons and tweakable banks of knobs, the 808 is the most iconic drum machine.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://fr.wikipedia.org/wiki/Roland_TR-808",
+    brandLink: "https://www.roland.com/fr/",
   },
   {
     picture: "./assets/minimoog.jpg",
@@ -87,7 +93,8 @@ const collection = [
       "Released in 1970, Minimoog was the world's first portable synthesizer and served as the archetype for all electronic keyboards that followed.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://www.moogmusic.com/products/minimoog-model-d",
+    brandLink: "https://www.moogmusic.com",
   },
   {
     picture: "./assets/mellotron.jpg",
@@ -98,7 +105,8 @@ const collection = [
       "The final reedition of the iconic instrument is back ! Used by a lot of great artist such as The Beatles, Elton John, Jean-Michel Jarre, ...",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://www.mellotron.com/digital-mellotron.html",
+    brandLink: "https://mellotron.com/",
   },
   {
     picture: "./assets/microbrute.jpg",
@@ -109,7 +117,8 @@ const collection = [
       "MicroBrute is a pure analog sonic powerhouse of a synth. Small in size but loaded with features providing harsch noises to great soundscapes.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://www.arturia.com/products/hardware-synths/microbrute",
+    brandLink: "https://www.arturia.com/",
   },
   {
     picture: "./assets/modular.jpg",
@@ -120,7 +129,8 @@ const collection = [
       "Modular synthesizers are composed of separate modules. The modules can be connected together by the user to create a unique sound.",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://www.modulargrid.net/",
+    brandLink: "https://www.modulargrid.net/",
   },
   {
     picture: "./assets/blofeld.jpg",
@@ -131,7 +141,8 @@ const collection = [
       "The most recent synth on this list, Arturia made a great deal with this Minifreak : tons of sound, nice playability with aftertouch keys. ",
     ],
     more: "Learn more",
-    link: "https://www.moogmusic.com/products/grandmother",
+    link: "https://waldorfmusic.com/blofeld-en/",
+    brandLink: "https://waldorfmusic.com/",
   },
 ];
 
@@ -142,14 +153,14 @@ returnCollection = (collection, sortBy) => {
     collection.sort((a, b) => a.model.localeCompare(b.model));
   } else if (sortBy === "brand") {
     collection.sort((a, b) => a.brand.localeCompare(b.brand));
+  } else if (sortBy === "default") {
   }
-
   return collection
     .map(
       (collectionBox) => `
       <li class="item_card">
         <figure class="item_header">
-          <img src="${collectionBox.picture}" />
+          <img src="${collectionBox.picture}" alt="${collectionBox.model}"/>
         </figure>
         <div class="item_content">
           <h2>${collectionBox.model}</h2>

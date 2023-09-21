@@ -139,6 +139,7 @@ table {
 body {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -155,7 +156,6 @@ header nav {
   justify-content: space-between;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 header nav .sorting {
@@ -165,10 +165,13 @@ header nav .sorting {
 }
 header nav .sorting select {
   border: none;
-  font-size: 0.9em;
+  font-size: 1em;
   margin-left: 12px;
   outline-color: transparent;
   background-color: transparent;
+}
+header nav .sorting select:hover {
+  cursor: pointer;
 }
 header nav li {
   margin-right: 20px;
@@ -203,6 +206,12 @@ header nav a:hover, header nav .collection-container .item_content h3 a:hover:vi
   border-radius: 5px;
   border: solid 2px black;
   padding-bottom: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: transform 160ms linear;
+}
+.collection-container .item_card:hover {
+  transform: scale(102%);
+  box-shadow: none;
 }
 .collection-container figure {
   position: relative;
@@ -249,16 +258,16 @@ header nav a:hover, header nav .collection-container .item_content h3 a:hover:vi
 .collection-container .cta .learn_btn {
   padding: 8px;
   margin-left: 12px;
-  background-color: white;
+  background-color: black;
   border: 2px solid black;
-  color: black;
+  color: white;
   text-decoration: none;
   font-family: "Syne", sans-serif;
 }
 .collection-container .cta .learn_btn:hover {
-  background-color: black;
+  background-color: white;
   border: 2px solid black;
-  color: white;
+  color: black;
 }
 .collection-container .cta .del_btn {
   margin-top: 12px;
@@ -268,5 +277,5 @@ header nav a:hover, header nav .collection-container .item_content h3 a:hover:vi
   color: rgba(128, 128, 128, 0.535);
 }
 .collection-container .cta .del_btn:hover {
-  color: rgb(133, 6, 6);
+  color: black;
 }/*# sourceMappingURL=style.css.map */
