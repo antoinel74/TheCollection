@@ -17,4 +17,6 @@ to create of collection of objects. You'll have to create a card for each object
 
 ## &#9749; Final output :
 
+https://antoinel74.github.io/TheCollection/
+
 ![Page Preview](assets/index.png);
