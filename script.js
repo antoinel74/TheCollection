@@ -102,7 +102,7 @@ const collection = [
     brand: "Streetly Electronics",
     releaseYear: 2007,
     content: [
-      "The final reedition of the iconic instrument is back ! Used by a lot of great artist such as The Beatles, Elton John, Jean-Michel Jarre, ...",
+      "Le Mellotron M4000D est la réplique numérique du légendaire M400 - presque aucun autre instrument électronique n'a un son aussi unique !",
     ],
     more: "Learn more",
     link: "https://www.mellotron.com/digital-mellotron.html",
@@ -179,6 +179,7 @@ returnCollection = (collection, sortBy) => {
     .join("");
 };
 
+// Sorting
 function populateContainer(sortBy) {
   container.innerHTML = returnCollection(collection, sortBy);
 }
@@ -188,8 +189,13 @@ document.getElementById("sortSelect").addEventListener("change", function () {
   populateContainer(sortBy);
 });
 
+// Deleting
 function removeBox(e) {
-  e.parentNode.parentNode.remove();
+  e.parentNode.parentNode.style.transform = "translateY(-36px)";
+  e.parentNode.parentNode.style.animationTimingFunction = "linear";
+  setTimeout(() => {
+    e.parentNode.parentNode.remove();
+  }, 180);
 }
 
 populateContainer();
